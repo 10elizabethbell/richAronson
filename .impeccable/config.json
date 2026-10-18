@@ -14,6 +14,21 @@
         "value": "rows",
         "createdAt": "2026-10-18T17:39:40.190Z",
         "reason": "model judgment: .rows is a ruled list (hairline top border) whose 78px-tall rows carry their own 10px vertical padding; flush-left text against a divider rule is intended"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "deep",
+        "createdAt": "2026-10-18T17:49:30.399Z",
+        "reason": "model judgment: section.deep is a full-bleed band; its inner .wrap carries a 20-36px gutter (verified in 360/390 screenshots)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-18T17:49:30.463Z",
+        "reason": "model judgment: detector reads only static px sizes; h1/h2 are clamp()-sized at 54-115px over 17px body (ratio >3)"
       }
     ]
   }

@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-18T13:52:34-04:00",
+  "title": "Design System: Rich Aronson",
+  "extensions": {
+    "colorMeta": {
+      "ground": {
+        "role": "neutral",
+        "displayName": "Pad Navy",
+        "canonical": "#142b5e",
+        "tonalRamp": [
+          "#0d1d3f",
+          "#18336f",
+          "#22499f",
+          "#2c5fcf",
+          "#5a82dc",
+          "#8aa7e6",
+          "#bacbf0",
+          "#eaeffb"
+        ]
+      },
+      "deep": {
+        "role": "neutral",
+        "displayName": "Panel Navy",
+        "canonical": "#0f2350",
+        "tonalRamp": [
+          "#0c1c40",
+          "#153272",
+          "#1e47a3",
+          "#285dd4",
+          "#5680df",
+          "#87a5e9",
+          "#b8caf2",
+          "#eaeffb"
+        ]
+      },
+      "blanket": {
+        "role": "secondary",
+        "displayName": "Royal Moving-Pad Blue",
+        "canonical": "#2452b3",
+        "tonalRamp": [
+          "#0d1d40",
+          "#173370",
+          "#204aa1",
+          "#2a60d1",
+          "#5883dd",
+          "#89a7e7",
+          "#b9cbf1",
+          "#eaeffb"
+        ]
+      },
+      "binding": {
+        "role": "neutral",
+        "displayName": "Binding Navy",
+        "canonical": "#0b1b40",
+        "tonalRamp": [
+          "#0b1c41",
+          "#143173",
+          "#1c46a5",
+          "#255ad6",
+          "#547fe2",
+          "#86a4ea",
+          "#b8c9f3",
+          "#e9effb"
+        ]
+      },
+      "strap": {
+        "role": "primary",
+        "displayName": "Ratchet-Strap Orange",
+        "canonical": "#ff8a1e",
+        "tonalRamp": [
+          "#4c2500",
+          "#874100",
+          "#c15d00",
+          "#fb7900",
+          "#ff9737",
+          "#ffb571",
+          "#ffd3ab",
+          "#fff2e6"
+        ]
+      },
+      "strap-hi": {
+        "role": "primary",
+        "displayName": "Strap Highlight",
+        "canonical": "#ff9d40",
+        "tonalRamp": [
+          "#4c2500",
+          "#874200",
+          "#c15e00",
+          "#fb7a00",
+          "#ff9837",
+          "#ffb671",
+          "#ffd4ab",
+          "#fff2e6"
+        ]
+      },
+      "on-strap": {
+        "role": "primary",
+        "displayName": "Strap Shadow",
+        "canonical": "#1d1204",
+        "tonalRamp": [
+          "#432a09",
+          "#764a10",
+          "#aa6917",
+          "#dd891e",
+          "#e7a44f",
+          "#eebe82",
+          "#f5d9b5",
+          "#fcf3e9"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Quilt White",
+        "canonical": "#f3f6ff",
+        "tonalRamp": [
+          "#00134c",
+          "#002287",
+          "#0030c1",
+          "#003ffb",
+          "#3769ff",
+          "#7194ff",
+          "#abc0ff",
+          "#e6ecff"
+        ]
+      },
+      "soft": {
+        "role": "neutral",
+        "displayName": "Faded Denim",
+        "canonical": "#bccbf0",
+        "tonalRamp": [
+          "#0e1c3f",
+          "#19316e",
+          "#23479e",
+          "#2e5ccd",
+          "#5b80da",
+          "#8ba5e5",
+          "#bbcaf0",
+          "#eaeffa"
+        ]
+      },
+      "stitch": {
+        "role": "neutral",
+        "displayName": "Stitch Blue",
+        "canonical": "#9fb8f2",
+        "tonalRamp": [
+          "#091b43",
+          "#102f77",
+          "#1743aa",
+          "#1e58dd",
+          "#4f7ce7",
+          "#82a2ee",
+          "#b5c8f5",
+          "#e9eefc"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "Sky Focus",
+        "canonical": "#8fd6ff",
+        "tonalRamp": [
+          "#00304c",
+          "#005587",
+          "#007ac1",
+          "#009ffb",
+          "#37b6ff",
+          "#71cbff",
+          "#abe0ff",
+          "#e6f6ff"
+        ]
+      },
+      "err": {
+        "role": "neutral",
+        "displayName": "Soft Coral",
+        "canonical": "#ffb3a8",
+        "tonalRamp": [
+          "#4c0a00",
+          "#871100",
+          "#c11800",
+          "#fb2000",
+          "#ff5037",
+          "#ff8371",
+          "#ffb6ab",
+          "#ffe9e6"
+        ]
+      },
+      "mustard": {
+        "role": "tertiary",
+        "displayName": "Mustard Upholstery",
+        "canonical": "#ecbd58",
+        "tonalRamp": [
+          "#453108",
+          "#79570e",
+          "#ad7d14",
+          "#e2a21a",
+          "#ebb84b",
+          "#f0cd7f",
+          "#f6e1b4",
+          "#fcf6e8"
+        ]
+      },
+      "walnut": {
+        "role": "tertiary",
+        "displayName": "Walnut",
+        "canonical": "#8a5631",
+        "tonalRamp": [
+          "#382314",
+          "#633e23",
+          "#8e5933",
+          "#b97442",
+          "#cb936b",
+          "#dab296",
+          "#e9d2c1",
+          "#f8f1ec"
+        ]
+      },
+      "kraft": {
+        "role": "tertiary",
+        "displayName": "Kraft Box",
+        "canonical": "#d3a46b",
+        "tonalRamp": [
+          "#3b2812",
+          "#68471f",
+          "#95662c",
+          "#c2843a",
+          "#d1a065",
+          "#debc91",
+          "#ecd7be",
+          "#f9f3eb"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(188,203,240,.22)"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "rgba(188,203,240,.6)"
+      },
+      "field-fill": {
+        "role": "neutral",
+        "displayName": "Field Well",
+        "canonical": "rgba(11,27,64,.55)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; one orange emphasis word."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings; closing call scales up to clamp(2.6rem,12vw,5.4rem)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service row names."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero promise (30ch) and section ledes (46ch) in faded denim."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, step text, form text."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase button text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "lift",
+        "value": "0 8px 18px -8px rgba(4,12,32,.7)",
+        "purpose": "Filled primary pills and the Facebook button only."
+      },
+      {
+        "name": "bound-disc",
+        "value": "inset 0 0 0 3px #0b1b40, inset 0 0 0 5px rgba(159,184,242,.35)",
+        "purpose": "Step-number discs: binding ring plus faint stitch ring."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-transition",
+        "value": "background .2s, color .2s, border-color .2s",
+        "purpose": "Button and arrow hover changes."
+      },
+      {
+        "name": "form-outline",
+        "value": "outline-color .15s, border-color .15s",
+        "purpose": "Form control hover/focus outline swap."
+      },
+      {
+        "name": "press",
+        "value": "transform .15s; scale(.98)",
+        "purpose": "Button press."
+      },
+      {
+        "name": "breeze",
+        "value": "y = 20 + 7·sin(.006x + 1.3t + φ) + 3.2·sin(.017x − 2.2t + 1.7φ) + 4·sin(.0021x + .5t)",
+        "purpose": "Hem divider sway; each hem has its own phase φ; shares the cloth's single rAF loop."
+      },
+      {
+        "name": "blanket-trick",
+        "value": "idle 3.2s, lower 1.0s, hold 1.0s, collapse .35s, raise 1.3s, empty 1.2s, enter .9s; easeInOutCubic",
+        "purpose": "Hero cloth disappear loop."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "single settled frame; smooth scroll off",
+        "purpose": "prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow-phone",
+        "value": "max-width: 389px"
+      },
+      {
+        "name": "no-tagline",
+        "value": "max-width: 399px"
+      },
+      {
+        "name": "tablet",
+        "value": "min-width: 760px"
+      },
+      {
+        "name": "desktop",
+        "value": "min-width: 1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Strap-orange pill with an inner dashed stitch; the one action (Text Rich, form submit).",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z\"/></svg>Text Rich</a>",
+      "css": ".ds-btn-primary{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:58px;padding:0 26px;border-radius:999px;background:var(--strap,#ff8a1e);color:var(--on-strap,#1d1204);border:2px solid var(--strap,#ff8a1e);font:800 1.05rem/1 var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;box-shadow:0 8px 18px -8px rgba(4,12,32,.7);transition:background .2s,border-color .2s,transform .15s;outline:3px solid transparent;outline-offset:3px} .ds-btn-primary::after{content:'';position:absolute;inset:4px;border-radius:inherit;border:1.5px dashed rgba(29,18,4,.32);pointer-events:none} .ds-btn-primary:hover{background:var(--strap-hi,#ff9d40);border-color:var(--strap-hi,#ff9d40)} .ds-btn-primary:focus-visible{outline-color:var(--focus,#8fd6ff)} .ds-btn-primary:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined secondary pill; the hero's second action only.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">What I do</a>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 26px;border-radius:999px;background:transparent;color:var(--ink,#f3f6ff);border:2px solid rgba(243,246,255,.55);font:800 1.05rem/1 var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;transition:background .2s,border-color .2s,transform .15s} .ds-btn-ghost:hover{border-color:var(--ink,#f3f6ff);background:rgba(243,246,255,.06)} .ds-btn-ghost:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:3px} .ds-btn-ghost:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Field-well input; border swaps for a sky-focus outline on hover and focus.",
+      "html": "<label class=\"ds-label\">Moving from<input class=\"ds-input\" type=\"text\" placeholder=\"Town\"></label>",
+      "css": ".ds-label{display:block;font:700 1rem/1.4 var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);color:var(--ink,#f3f6ff)} .ds-input{display:block;width:100%;margin-top:8px;min-height:54px;padding:14px 16px;border-radius:14px;border:2px solid rgba(188,203,240,.6);background:rgba(11,27,64,.55);color:var(--ink,#f3f6ff);font:400 17px/1.4 var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);outline:3px solid transparent;outline-offset:2px;caret-color:var(--strap,#ff8a1e);transition:outline-color .15s,border-color .15s} .ds-input::placeholder{color:#93a6d6} .ds-input:hover,.ds-input:focus{outline-color:var(--focus,#8fd6ff);border-color:transparent}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Radio pill in the quote form; selected fills quilt white.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"radio\" name=\"k\" checked><span>Small move</span></label><label class=\"ds-chip\"><input type=\"radio\" name=\"k\"><span>Clean out</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px} .ds-chip{position:relative} .ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0} .ds-chip span{display:flex;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;border:2px solid rgba(188,203,240,.6);color:var(--ink,#f3f6ff);font:700 1rem var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);cursor:pointer;outline:3px solid transparent;outline-offset:2px;transition:border-color .15s,background .15s,color .15s,outline-color .15s} .ds-chip input:checked+span{background:var(--ink,#f3f6ff);color:var(--ground,#142b5e);border-color:var(--ink,#f3f6ff)} .ds-chip span:hover,.ds-chip input:focus-visible+span{outline-color:var(--focus,#8fd6ff)}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Whole-row text link; on hover only the arrow circle fills orange.",
+      "html": "<a class=\"ds-row\" href=\"#\"><b>Small moves</b><span class=\"ds-arrow\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></span></a>",
+      "css": ".ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px;padding:10px 0;border-top:1px solid rgba(188,203,240,.22);border-bottom:1px solid rgba(188,203,240,.22);color:var(--ink,#f3f6ff);text-decoration:none} .ds-row b{font:900 clamp(1.45rem,6.4vw,2.2rem)/1 var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif);text-transform:uppercase;letter-spacing:-.01em} .ds-arrow{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:2px solid rgba(243,246,255,.4);transition:background .2s,border-color .2s,color .2s} .ds-row:hover,.ds-row:focus-visible{outline:none;background:none;box-shadow:none} .ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:var(--strap,#ff8a1e);border-color:var(--strap,#ff8a1e);color:var(--on-strap,#1d1204)} .ds-row:focus-visible .ds-arrow{outline:3px solid var(--strap,#ff8a1e);outline-offset:3px}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Non-sticky header: wordmark left, tap-to-call number top-right.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-mark\" href=\"#\"><b>Rich Aronson</b><span>Small moves &amp; clean outs</span></a><a class=\"ds-tel\" href=\"tel:+17326827345\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z\"/></svg>732-682-7345</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px 10px;background:var(--ground,#142b5e);color:var(--ink,#f3f6ff);font-family:var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif)} .ds-mark{display:flex;flex-direction:column;min-height:44px;justify-content:center;line-height:1;text-decoration:none;color:inherit} .ds-mark b{font-weight:900;text-transform:uppercase;font-size:1.15rem;letter-spacing:.02em} .ds-mark span{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft,#bccbf0);margin-top:5px} .ds-tel{display:flex;align-items:center;gap:8px;min-height:44px;font-weight:800;font-size:1.02rem;font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;color:inherit;transition:color .2s} .ds-tel svg{color:var(--strap,#ff8a1e)} .ds-tel:hover{color:var(--strap,#ff8a1e)} .ds-tel:focus-visible{outline:3px solid var(--focus,#8fd6ff);outline-offset:3px}"
+    },
+    {
+      "name": "Step Marker",
+      "kind": "custom",
+      "refersTo": "step-marker",
+      "description": "Royal-blue bound disc numbering the how-it-works steps.",
+      "html": "<ol class=\"ds-steps\"><li><b>Text me what's moving and where.</b><span>A photo of the big pieces helps.</span></li><li><b>We pick a day that works for you.</b></li></ol>",
+      "css": ".ds-steps{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:s;color:var(--ink,#f3f6ff);font-family:var(--font, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif)} .ds-steps li{display:grid;grid-template-columns:52px 1fr;column-gap:14px;counter-increment:s} .ds-steps li::before{content:counter(s);grid-row:span 2;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--blanket,#2452b3);font-weight:900;font-size:1.3rem;box-shadow:inset 0 0 0 3px #0b1b40,inset 0 0 0 5px rgba(159,184,242,.35)} .ds-steps b{font-size:1.18rem;font-weight:700;line-height:1.3;padding-top:3px} .ds-steps span{color:var(--soft,#bccbf0);margin-top:4px}"
+    },
+    {
+      "name": "Hem Divider",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Blanket-edge section divider: wavy fill, 7px navy binding, dashed stitch. Animated in the build by three layered sines; static here.",
+      "html": "<div class=\"ds-hem-wrap\"><svg class=\"ds-hem\" viewBox=\"0 0 1200 46\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path class=\"fill\" d=\"M0 20 C200 10 400 30 600 20 S1000 10 1200 22 L1200 46 L0 46 Z\"/><path class=\"bind\" d=\"M0 20 C200 10 400 30 600 20 S1000 10 1200 22\"/><path class=\"stitch\" d=\"M0 28 C200 18 400 38 600 28 S1000 18 1200 30\"/></svg></div>",
+      "css": ".ds-hem-wrap{background:var(--ground,#142b5e)} .ds-hem{display:block;width:100%;height:46px} .ds-hem .fill{fill:var(--deep,#0f2350)} .ds-hem .bind{fill:none;stroke:var(--binding,#0b1b40);stroke-width:7} .ds-hem .stitch{fill:none;stroke:var(--stitch,#9fb8f2);stroke-width:1.6;stroke-dasharray:6 6;opacity:.75}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Moving Blanket on a Ratchet Strap",
+    "overview": "The whole page is made of the two things that protect your furniture in the back of Rich's van: a quilted royal-blue moving pad and an orange ratchet strap. The page ground is the pad (drenched navy blues, never black), every section edge is the pad's navy binding with a pale-blue running stitch, and the strap's orange is reserved for the one thing a visitor should do: text Rich. The hero is a live verlet-cloth blanket hung from the strap that drops over a piece of furniture and lifts with it gone (\"I can make it disappear\"), and the same breeze sways every section divider.\n\nThe page is phone-first and dense: heavy uppercase system-sans headings that fill the width, plain sentence-case body, big pill buttons, full-width tappable rows. Warmth comes only from the furniture inside the blanket stage (mustard upholstery, walnut wood, kraft boxes); the chrome never borrows those colors. Depth is quilting and binding, not cards and shadows.\n\nThe system rejects the moving-category defaults: cardboard-box icons, truck clip art, stock photos of families carrying a couch.",
+    "keyCharacteristics": [
+      "Drenched blue grounds alternating between pad navy and a deeper panel navy, joined by animated hem dividers.",
+      "One action color (strap orange), used for filled buttons, the phone glyph, headline emphasis words and hovered arrows.",
+      "Heavy uppercase display type (900) in the system font stack; sentence-case body.",
+      "Pills and circles for everything you tap; 14px corners only on text fields and form panels.",
+      "One shared animation loop; cloth and hems both pause off-screen and hold a still frame under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The One Strap Rule",
+        "body": "Orange means \"do this.\" It goes only on actions and on the words that name the action. Non-interactive elements never use it at rest; arrows and icons turn orange on hover, not by default.",
+        "section": "colors"
+      },
+      {
+        "name": "The Never Black Rule",
+        "body": "Every ground is a blue (darkest is binding navy). No black or near-black surface, ever; this is a brand commitment.",
+        "section": "colors"
+      },
+      {
+        "name": "The Furniture Stays In The Blanket Rule",
+        "body": "Mustard, walnut and kraft exist only inside the hero illustration. The page chrome stays blue, white and orange.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Uppercase 900 sells, sentence case explains. Never uppercase a sentence of body copy; never set a heading in a light weight.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Number Rule",
+        "body": "The phone number always renders with tabular numerals and never wraps.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Sticky Bar Rule",
+        "body": "Nothing is fixed to the viewport. The call path is the top-right number; the text path is the hero button, the service rows, the form and the closing button.",
+        "section": "layout"
+      },
+      {
+        "name": "The Hem Not Line Rule",
+        "body": "Section changes are always a moving hem divider in the world's own binding and stitch, never a straight color edge or a hairline rule. Flipped hems fill from the section above; the fill color is read from the neighbouring section so the edge never shows a gap.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep every ground a blue from the token set; alternate pad navy and panel navy between sections.",
+      "Do join sections with the animated hem (fill, 7px binding, dashed stitch) driven by the shared animation loop.",
+      "Do reserve strap orange for actions, the action's words in headlines, and hover/focus states of tappable cues.",
+      "Do outline every form control (fields, chips, form buttons) in sky focus (#8fd6ff) on hover and focus, and nothing outside the form that way.",
+      "Do set selling copy in 900-weight uppercase system sans with negative tracking; explain in 17px sentence case.",
+      "Do make tappable things pills or circles at 44px minimum, primary buttons 58px.",
+      "Do keep the phone number top-right as a tap-to-call link and the only number on the first screen.",
+      "Do pause motion off-screen and hold a still frame under reduced motion."
+    ],
+    "donts": [
+      "Don't use a black or near-black ground anywhere.",
+      "Don't put orange on anything non-interactive at rest, including service arrows before hover.",
+      "Don't highlight a service row on hover; only its arrow fills.",
+      "Don't add a sticky bottom bar or any fixed element.",
+      "Don't put a Call button under the hero headline or show the number twice on one screen.",
+      "Don't use mustard, walnut or kraft outside the blanket stage.",
+      "Don't separate sections with straight color edges or hairline rules.",
+      "Don't use hard offset shadows; the only drop shadow is the soft navy lift under filled pills.",
+      "Don't use cardboard-box icons, truck clip art or stock movers."
+    ]
+  }
+}
