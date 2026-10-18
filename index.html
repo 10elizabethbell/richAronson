@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rich Aronson · Small Moves &amp; Clean Outs</title>
+<meta name="description" content="Moving soon? Rich Aronson does small moves with a large Sprinter van, clean outs, and furniture removal in New Jersey. Call or text 732-682-7345.">
+<meta name="theme-color" content="#142b5e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moving soon? Call or text Rich.">
+<meta property="og:description" content="Small moves with a large Sprinter van, clean outs, and furniture removal. 732-682-7345.">
+<meta property="og:url" content="https://10elizabethbell.github.io/richAronson/">
+<meta property="og:image" content="https://10elizabethbell.github.io/richAronson/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --ground:#142b5e;      /* deep moving-pad navy: page ground */
+  --deep:#0f2350;        /* darker panel, still blue, never black */
+  --blanket:#2452b3;     /* royal moving-pad blue */
+  --blanket-hi:#3d6fd6;
+  --binding:#0b1b40;
+  --strap:#ff8a1e;       /* ratchet-strap orange: primary action */
+  --strap-dk:#e06d00;
+  --ink:#f3f6ff;
+  --soft:#bccbf0;        /* secondary text, tinted from the blue */
+  --stitch:#9fb8f2;
+  --focus:#8fd6ff;       /* form hover/focus outline */
+  --wood:#9a6538;
+  --radius:14px;
+  --gutter:20px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 17px/1.55 var(--font);overflow-x:hidden}
+::selection{background:var(--strap);color:#1a1205}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+img{max-width:100%}
+.wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+h1,h2,h3{margin:0;font-weight:900;text-transform:uppercase;line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(2rem,8.4vw,3.6rem)}
+p{margin:0}
+
+/* ---------- buttons ---------- */
+.btn{display:flex;align-items:center;justify-content:center;gap:.6em;min-height:58px;padding:0 26px;border-radius:999px;font:800 1.05rem/1 var(--font);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border:2px solid var(--strap);transition:background .2s,color .2s,border-color .2s,transform .15s;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--strap);color:#1d1204;box-shadow:0 8px 18px -8px rgba(4,12,32,.7)}
+.btn-primary:hover{background:#ff9d40;border-color:#ff9d40}
+.btn-ghost{background:transparent;color:var(--ink);border-color:rgba(243,246,255,.55)}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(243,246,255,.06)}
+.btn svg{width:22px;height:22px;flex:none}
+
+/* ---------- header ---------- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:max(14px,env(safe-area-inset-top));padding-bottom:10px}
+.mark{display:flex;flex-direction:column;justify-content:center;min-height:44px;text-decoration:none;line-height:1;min-width:0}
+.mark b{font-weight:900;text-transform:uppercase;font-size:1.15rem;letter-spacing:.02em}
+.mark span{font-size:.75rem;letter-spacing:.08em;white-space:nowrap;text-transform:uppercase;color:var(--soft);margin-top:5px}
+.tel{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;font-weight:800;font-size:1.02rem;text-decoration:none;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tel svg{width:18px;height:18px;color:var(--strap)}
+.tel:hover{color:var(--strap)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding-bottom:6px}
+.hero-grid{display:grid;gap:10px}
+.hero-copy{padding-top:clamp(18px,5vw,40px)}
+.hero h1{font-size:clamp(3.4rem,17.5vw,7.2rem);letter-spacing:-.035em;line-height:.86}
+.hero h1 em{font-style:normal;color:var(--strap)}
+.promise{margin-top:16px;font-size:clamp(1.05rem,4.5vw,1.25rem);line-height:1.45;color:var(--soft);max-width:30ch}
+.promise strong{color:var(--ink);font-weight:700}
+.cta{display:grid;gap:12px;margin-top:22px}
+.stage{position:relative;height:clamp(300px,82vw,380px);margin:0 calc(var(--gutter) * -1)}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block;cursor:grab}
+.stage canvas:active{cursor:grabbing}
+.stage .still{position:absolute;inset:0}
+
+/* ---------- hem divider (animated blanket edge) ---------- */
+.hem{display:block;width:100%;height:46px;margin-top:-1px}
+.hem path.fill{fill:var(--deep)}
+.hem path.bind{fill:none;stroke:var(--binding);stroke-width:7}
+.hem path.stitch{fill:none;stroke:var(--stitch);stroke-width:1.6;stroke-dasharray:6 6;opacity:.75}
+.hem.flip{transform:scaleY(-1);margin-top:0;margin-bottom:-1px}
+.deep{background:var(--deep)}
+
+/* ---------- services ---------- */
+.section{padding:56px 0}
+.rows{list-style:none;margin:26px 0 0;padding:0;border-top:1px solid rgba(188,203,240,.22)}
+.rows li{border-bottom:1px solid rgba(188,203,240,.22)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px;padding:10px 0;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.row b{font-size:clamp(1.45rem,6.4vw,2.2rem);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1}
+.row small{display:block;margin-top:6px;font-size:.95rem;color:var(--soft);font-weight:400;text-transform:none;letter-spacing:0}
+.arrow{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;border:2px solid rgba(243,246,255,.4);transition:background .2s,border-color .2s,color .2s}
+.arrow svg{width:20px;height:20px}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--strap);border-color:var(--strap);color:#1d1204}
+.row:focus-visible .arrow{outline:3px solid var(--strap);outline-offset:3px}
+
+/* ---------- specialty ---------- */
+.specialty p{margin-top:18px;font-size:1.12rem;color:var(--soft);max-width:36ch}
+.specialty p strong{color:var(--ink)}
+.fb{display:inline-flex;align-items:center;gap:12px;margin-top:28px;min-height:58px;padding:0 24px 0 18px;border-radius:999px;background:#1460cf;color:#fff;font-weight:800;text-decoration:none;letter-spacing:.01em;box-shadow:0 8px 18px -8px rgba(4,12,32,.7);transition:background .2s}
+.fb:hover{background:#0f52b5}
+.fb svg{width:26px;height:26px}
+
+/* ---------- how it works ---------- */
+.steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:22px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--blanket);color:var(--ink);font-weight:900;font-size:1.3rem;box-shadow:inset 0 0 0 3px var(--binding),inset 0 0 0 5px rgba(159,184,242,.35)}
+.steps b{display:block;font-size:1.18rem;font-weight:800;line-height:1.25;padding-top:3px}
+.steps span{display:block;color:var(--soft);margin-top:4px}
+.note{margin-top:30px;padding:18px 20px;border-radius:var(--radius);background:rgba(36,82,179,.35);font-size:1.05rem}
+.note b{color:var(--strap);text-transform:uppercase;letter-spacing:.06em;font-size:1rem;display:block;margin-bottom:4px}
+
+/* ---------- quote form ---------- */
+.quote{max-width:640px}
+.quote > p{margin-top:14px;color:var(--soft);font-size:1.08rem}
+form{margin-top:24px;display:grid;gap:18px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,label{display:block;font-weight:700;margin-bottom:8px;font-size:1rem}
+label .opt{color:var(--soft);font-weight:400}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{display:flex;align-items:center;min-height:48px;padding:0 18px;border-radius:999px;border:2px solid rgba(188,203,240,.4);font-weight:700;cursor:pointer;transition:border-color .15s,background .15s,color .15s,outline-color .15s;outline:3px solid transparent;outline-offset:2px}
+.chip input:checked + span{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.chip span:hover,.chip input:focus-visible + span{outline-color:var(--focus)}
+input[type=text],textarea{width:100%;min-height:54px;padding:14px 16px;border-radius:12px;border:2px solid rgba(188,203,240,.35);background:rgba(11,27,64,.55);color:var(--ink);font:400 17px/1.4 var(--font);outline:3px solid transparent;outline-offset:2px;transition:outline-color .15s,border-color .15s;caret-color:var(--strap)}
+textarea{min-height:120px;resize:vertical}
+input::placeholder,textarea::placeholder{color:#93a6d6}
+input[type=text]:hover,textarea:hover,input[type=text]:focus,textarea:focus{outline-color:var(--focus);border-color:transparent}
+.two{display:grid;gap:18px}
+.err{display:none;margin-top:8px;color:#ffc7a1;font-size:.95rem;font-weight:600}
+.bad .err{display:block}
+.bad input,.bad textarea{border-color:#ff9d5c}
+form .btn{width:100%;outline:3px solid transparent;outline-offset:3px}
+form .btn:hover,form .btn:focus-visible{outline-color:var(--focus)}
+.sent{display:none;margin-top:6px;padding:18px;border-radius:var(--radius);background:rgba(11,27,64,.6)}
+.sent.on{display:block}
+.sent pre{white-space:pre-wrap;font:inherit;margin:10px 0 14px;color:var(--soft)}
+.sent .copy{background:none;border:2px solid rgba(243,246,255,.5);color:var(--ink);border-radius:999px;min-height:46px;padding:0 18px;font:700 .95rem var(--font);cursor:pointer;outline:3px solid transparent;outline-offset:2px}
+.sent .copy:hover,.sent .copy:focus-visible{outline-color:var(--focus)}
+[hidden]{display:none!important}
+
+/* ---------- close ---------- */
+.close{text-align:center;padding:70px 0 64px}
+.close h2{font-size:clamp(2.6rem,12vw,5.4rem);line-height:.9}
+.close h2 em{font-style:normal;color:var(--strap)}
+.close .btn{max-width:360px;margin:28px auto 0}
+.close .or{display:block;margin-top:18px;color:var(--soft)}
+.close .or a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:800;font-variant-numeric:tabular-nums}
+
+/* ---------- footer ---------- */
+footer{background:var(--binding);padding:34px 0 calc(34px + env(safe-area-inset-bottom));font-size:1.02rem;color:var(--soft)}
+footer .wrap{display:grid;gap:14px}
+footer b{color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
+footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:600}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 24px}
+
+@media (max-width:389px){
+  .mark b{font-size:1.02rem}
+  .mark span{font-size:.72rem;letter-spacing:.04em}
+  .tel{font-size:.95rem;gap:5px}
+  .tel svg{width:15px;height:15px}
+}
+/* ---------- desktop ---------- */
+@media (min-width:760px){
+  :root{--gutter:36px}
+  .cta{grid-template-columns:auto auto;justify-content:start}
+  .two{grid-template-columns:1fr 1fr}
+  .section{padding:84px 0}
+}
+@media (min-width:1024px){
+  .hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);align-items:center;gap:30px}
+  .hero-copy{padding:40px 0 60px}
+  .stage{height:560px;margin:0}
+  .promise{font-size:1.25rem}
+  .services-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+  .services-grid .rows{margin-top:0}
+  .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+  .quote-block .steps{margin-top:30px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<!--
+THESIS: Rich's page is a quilted moving blanket on an orange ratchet strap, and it does his best line live: the blanket drops over a piece of furniture and lifts with it gone. Refuses the category default of cardboard boxes, a truck icon and a stock family carrying a couch.
+OWN-WORLD: Drenched moving-pad blue (#142b5e ground, #2452b3 quilt), diamond quilt stitching in pale blue, navy binding along every edge, ratchet-strap orange (#ff8a1e) as the only action color, warm furniture (mustard, walnut, kraft) as the only other colors. Heavy uppercase system sans, tracked small labels like stitching.
+STORY: Visitor sees "Moving soon?" in Rich's own words, believes one guy with a big van will handle their things carefully, and texts him.
+FIRST VIEWPORT: Phone: wordmark left, 732-682-7345 top right; huge MOVING SOON?; one promise line; Text Rich (filled orange) + What I do (outlined); the blanket stage fills the rest. Desktop: copy left, blanket stage right.
+FORM: Fused challenger (drawcord cape -> moving blanket on strap), beat assigned candidate 7 (curbside hand-lettered sign); seed 83ba4e94.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<header class="wrap top">
+  <a class="mark" href="#top" aria-label="Rich Aronson, small moves and clean outs">
+    <b>Rich Aronson</b>
+    <span>Small moves &amp; clean outs</span>
+  </a>
+  <a class="tel" href="tel:+17326827345">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    732-682-7345
+  </a>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>Moving <em>soon?</em></h1>
+      <p class="promise">I show up with a <strong>large Sprinter van</strong> and carry your things like they were my own.</p>
+      <div class="cta">
+        <a class="btn btn-primary" id="heroText" href="sms:+17326827345?&amp;body=Hi%20Rich%2C%20I%20found%20your%20website.%20I%27m%20moving%20soon%20and%20could%20use%20your%20van.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2z" opacity=".95"/></svg>
+          Text Rich
+        </a>
+        <a class="btn btn-ghost" href="#services">What I do</a>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <canvas id="cloth" aria-label="A blue moving blanket on an orange strap drops over a piece of furniture and lifts with it gone. Drag the blanket to push it, or pull the strap down."></canvas>
+    </div>
+  </div>
+  <svg class="hem" data-hem viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path class="fill"/><path class="bind"/><path class="stitch"/></svg>
+</section>
+
+<section class="deep section" id="services">
+  <div class="wrap services-grid">
+    <h2>What I do</h2>
+    <ul class="rows">
+      <li><a class="row" href="sms:+17326827345?&amp;body=Hi%20Rich%2C%20I%27ve%20got%20a%20small%20move%20coming%20up.%0AFrom%3A%20%0ATo%3A%20%0AWhen%3A%20">
+        <b>Small moves</b><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a class="row" href="sms:+17326827345?&amp;body=Hi%20Rich%2C%20I%20need%20help%20with%20a%20clean%20out.%0AWhere%3A%20%0AWhen%3A%20">
+        <b>Clean outs</b><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a class="row" href="sms:+17326827345?&amp;body=Hi%20Rich%2C%20I%27ve%20got%20some%20furniture%20I%20need%20to%20disappear.%0AWhat%3A%20%0AWhere%3A%20">
+        <b>Furniture removal</b><span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<svg class="hem flip" data-hem data-phase="2" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path class="fill"/><path class="bind"/><path class="stitch"/></svg>
+
+<section class="section specialty">
+  <div class="wrap">
+    <h2>Small moves are my specialty</h2>
+    <p>An apartment, a few rooms, a couch across town. A big truck is too much and a pickup isn't enough. <strong>My Sprinter van is the right size,</strong> and when you text, you get me.</p>
+    <p>If you have one or a few pieces of usable furniture you're done with, I can make it disappear.</p>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=100077726984175" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>
+      Find me on Facebook
+    </a>
+  </div>
+</section>
+
+<svg class="hem" data-hem data-phase="4" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path class="fill"/><path class="bind"/><path class="stitch"/></svg>
+
+<section class="deep section" id="quote">
+  <div class="wrap how-grid">
+    <div>
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><div><b>Text me what's moving and where.</b><span>A photo of the big pieces helps.</span></div></li>
+        <li><div><b>We pick a day that works for you.</b></div></li>
+        <li><div><b>I pull up with the van and do the lifting.</b><span>Your things get handled like they're going to my place.</span></div></li>
+      </ol>
+      <p class="note"><b>Clean outs</b>You get the dumpster. I provide the labor to fill it.</p>
+    </div>
+
+    <div class="quote">
+      <h2>Get a price by text</h2>
+      <p>Fill this in and your phone writes the text for you.</p>
+      <form id="qform" novalidate>
+        <fieldset>
+          <legend>What do you need?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="kind" value="move" checked><span>Small move</span></label>
+            <label class="chip"><input type="radio" name="kind" value="clean"><span>Clean out</span></label>
+            <label class="chip"><input type="radio" name="kind" value="furniture"><span>Furniture removal</span></label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <div class="field" data-req>
+            <label for="from" id="fromLabel">Moving from</label>
+            <input type="text" id="from" name="from" autocomplete="address-level2" placeholder="Town">
+            <p class="err">Tell me the town so I know where to go.</p>
+          </div>
+          <div class="field" id="toField">
+            <label for="to">Moving to</label>
+            <input type="text" id="to" name="to" autocomplete="off" placeholder="Town">
+          </div>
+        </div>
+        <div class="field">
+          <label for="when">When <span class="opt">(optional)</span></label>
+          <input type="text" id="when" name="when" placeholder="Saturday the 25th, end of the month…">
+        </div>
+        <div class="field" data-req>
+          <label for="what" id="whatLabel">What's going?</label>
+          <textarea id="what" name="what" placeholder="Bed, dresser, couch, about 15 boxes. Second floor, no elevator."></textarea>
+          <p class="err">A quick list is plenty.</p>
+        </div>
+        <div class="field">
+          <label for="name">Your name <span class="opt">(optional)</span></label>
+          <input type="text" id="name" name="name" autocomplete="given-name">
+        </div>
+        <button class="btn btn-primary" type="submit">Text this to Rich</button>
+        <div class="sent" id="sent" aria-live="polite">
+          <b>Your text app should be open with this message.</b>
+          <pre id="msg"></pre>
+          <button class="copy" type="button" id="copy">Copy message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<svg class="hem flip" data-hem data-phase="1" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path class="fill"/><path class="bind"/><path class="stitch"/></svg>
+
+<section class="close">
+  <div class="wrap">
+    <h2>Moving soon? <em>Text Rich.</em></h2>
+    <a class="btn btn-primary" href="sms:+17326827345?&amp;body=Hi%20Rich%2C%20I%20found%20your%20website.%20I%27m%20moving%20soon%20and%20could%20use%20your%20van.">Text Rich</a>
+    <span class="or">or call <a href="tel:+17326827345">732-682-7345</a></span>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Rich Aronson</b><br>Small moves, clean outs and furniture removal in New Jersey.</div>
+    <nav>
+      <a href="tel:+17326827345">732-682-7345</a>
+      <a href="https://www.facebook.com/profile.php?id=100077726984175" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+/* ===== shared animation loop: one rAF, tickers register here ===== */
+var Loop=(function(){
+  var fns=[],running=false,last=0;
+  function frame(t){
+    var dt=Math.min(.033,(t-last)/1000||.016);last=t;
+    var any=false;
+    for(var i=0;i<fns.length;i++){if(fns[i].on){fns[i].fn(t/1000,dt);any=true}}
+    if(any)requestAnimationFrame(frame);else running=false;
+  }
+  return{
+    add:function(fn){var h={fn:fn,on:false};fns.push(h);return h},
+    wake:function(){if(!running){running=true;last=performance.now();requestAnimationFrame(frame)}}
+  };
+})();
+var REDUCED=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function watch(el,h){
+  if(!('IntersectionObserver' in window)){h.on=true;Loop.wake();return}
+  new IntersectionObserver(function(es){h.on=es[0].isIntersecting;if(h.on)Loop.wake()},{rootMargin:'80px'}).observe(el);
+}
+
+/* ===== the moving blanket: verlet cloth on a ratchet strap ===== */
+(function(){
+  var CELL=9;             /* cloth grid spacing, px */
+  var QUILT_PX=24;        /* half-width of a quilted diamond, px */
+  var QUILT=3;
+  var GRAV=1500;          /* px/s^2 */
+  var DAMP=.985;
+  var BEND=.22;           /* fold roundness */
+  var ITER=6;             /* constraint passes per frame */
+  var WIND=320;           /* breeze strength */
+  var GATHER=.88;         /* pins sit closer than the cloth is wide, so it hangs in folds */
+  var PUSH_R=60;          /* finger/mouse reach */
+  var PUSH=0.55;          /* share of pointer velocity given to cloth */
+  var IDLE=3.2, LOWER=1.0, HOLD=.75, RAISE=1.0, EMPTY=1.4, ENTER=.9; /* trick timing, s */
+
+  var cv=document.getElementById('cloth'),stage=document.getElementById('stage');
+  var ctx=cv.getContext('2d');
+  var W=0,H=0,dpr=1,cols,rows,P=[],floorY,rodX0,rodX1,rodUp,rodDown,rodY,furnW,furnH;
+  var state='idle',st=0,lowerFrom=0,raiseFrom=0,piece=0,pieceShow=1,pieceX=0,puff=0;
+  var ptr={x:0,y:0,px:0,py:0,in:false,down:false,cx:0,cy:0,strap:false,moved:0};
+  var PIECES=['chair','dresser','boxes'],light=null;
+
+  function build(){
+    var r=stage.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height);
+    if(w===W&&h===H)return false;
+    W=w;H=h;dpr=Math.min(1.5,window.devicePixelRatio||1);
+    cv.width=Math.round(W*dpr);cv.height=Math.round(H*dpr);
+    floorY=H-22;
+    furnH=Math.min(H*.33,190);furnW=furnH*1.15;
+    var bw=Math.min(W*.8,furnW*2,470);
+    rodX0=(W-bw)/2;rodX1=rodX0+bw;
+    cols=Math.max(12,Math.round(bw/CELL))+1;
+    var rest=bw/(cols-1);
+    QUILT=Math.max(2,Math.round(QUILT_PX/rest));
+    rodUp=26;
+    var pieceTop=floorY-furnH;
+    rows=Math.max(8,Math.round((pieceTop-rodUp-14)/rest))+1;  /* raised, the hem clears the piece */
+    var len=(rows-1)*rest;
+    rodDown=Math.min(pieceTop-6,floorY-len+30);               /* lowered, it swallows the piece and pools on the floor */
+    rodY=rodUp;
+    P=[];
+    for(var j=0;j<rows;j++)for(var i=0;i<cols;i++){
+      var x=pinX(i,rest),y=rodY+j*rest;P.push({x:x,y:y,px:x,py:y,rest:rest});
+    }
+    pieceX=W/2;
+    return true;
+  }
+  function at(i,j){return P[j*cols+i]}
+  function pinX(i,rest){var w=(cols-1)*rest;return rodX0+w*(1-GATHER)/2+i*rest*GATHER}
+
+  function ease(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2}
+
+  function sim(t,dt){
+    var rest=P[0].rest;
+    /* trick state machine: idle -> lower -> hold (piece vanishes) -> raise -> empty -> next piece slides in */
+    st+=dt;
+    if(!ptr.strap){
+      if(state==='idle'&&st>IDLE){state='lower';st=0;lowerFrom=rodY}
+      if(state==='lower'){rodY=lowerFrom+(rodDown-lowerFrom)*ease(Math.min(1,st/LOWER));if(st>=LOWER){state='hold';st=0}}
+      if(state==='hold'){rodY=rodDown;if(st>.3)pieceShow=0;if(st>=HOLD){state='raise';st=0;raiseFrom=rodY}}
+      if(state==='raise'){rodY=raiseFrom+(rodUp-raiseFrom)*ease(Math.min(1,st/RAISE));if(st>=RAISE){state=pieceShow?'idle':'empty';st=0;if(!pieceShow)puff=1}}
+      if(state==='empty'&&st>=EMPTY){state='enter';st=0;piece=(piece+1)%PIECES.length;pieceShow=1}
+      if(state==='enter'){var k=Math.min(1,st/ENTER);pieceX=W/2+(1-ease(k))*(W*.75);if(k>=1){state='idle';st=0;pieceX=W/2}}
+    }
+    puff=Math.max(0,puff-dt*1.4);
+
+    /* pointer in scene coords, read the rect every frame */
+    var r=cv.getBoundingClientRect();
+    ptr.px=ptr.x;ptr.py=ptr.y;ptr.x=ptr.cx-r.left;ptr.y=ptr.cy-r.top;
+    var vx=ptr.x-ptr.px,vy=ptr.y-ptr.py;
+    if(ptr.strap){rodY=Math.max(rodUp,Math.min(rodDown,ptr.y));}
+
+    var g=GRAV*dt*dt,n=rows*cols;
+    for(var j=0;j<rows;j++)for(var i=0;i<cols;i++){
+      var p=at(i,j);
+      if(j===0){var x=pinX(i,rest);p.x=p.px=x;p.y=p.py=rodY;continue}
+      var depth=j/(rows-1);
+      var wind=WIND*(Math.sin(t*1.7+j*.23+i*.09)*.55+Math.sin(t*2.9-i*.21+j*.05)*.3+Math.sin(t*.6+i*.04)*.4)*depth;
+      var nx=p.x+(p.x-p.px)*DAMP+wind*dt*dt,ny=p.y+(p.y-p.py)*DAMP+g;
+      p.px=p.x;p.py=p.y;p.x=nx;p.y=ny;
+      if(ptr.in&&!ptr.strap){
+        var dx=p.x-ptr.x,dy=p.y-ptr.y,d2=dx*dx+dy*dy;
+        if(d2<PUSH_R*PUSH_R){
+          var d=Math.sqrt(d2)||1,f=1-d/PUSH_R;
+          p.x+=vx*PUSH*f+dx/d*f*1.6;p.y+=vy*PUSH*f+dy/d*f*1.6;
+        }
+      }
+    }
+    for(var it=0;it<ITER;it++){
+      for(var j2=0;j2<rows;j2++)for(var i2=0;i2<cols;i2++){
+        var a=at(i2,j2);
+        if(i2<cols-1)link(a,at(i2+1,j2),rest,j2===0);
+        if(j2<rows-1)link(a,at(i2,j2+1),rest,j2===0);
+        /* bending: skip-one links keep folds round instead of creased */
+        if(i2<cols-2&&j2>0)bend(a,at(i2+2,j2),rest*2);
+        if(j2<rows-2)bend(a,at(i2,j2+2),rest*2,j2===0);
+      }
+      for(var q=cols;q<n;q++){var pp=P[q];if(pp.y>floorY){pp.y=floorY;pp.px+= (pp.x-pp.px)*.35}if(pp.x<4)pp.x=4;if(pp.x>W-4)pp.x=W-4}
+    }
+  }
+  function bend(a,b,rest,aPinned){
+    var dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||.001;
+    if(d>=rest)return;
+    var diff=(d-rest)/d*BEND;
+    if(aPinned){b.x-=dx*diff;b.y-=dy*diff;return}
+    var h=diff*.5;a.x+=dx*h;a.y+=dy*h;b.x-=dx*h;b.y-=dy*h;
+  }
+  function link(a,b,rest,aPinned){
+    var dx=b.x-a.x,dy=b.y-a.y,d=Math.sqrt(dx*dx+dy*dy)||.001,diff=(d-rest)/d;
+    if(aPinned){b.x-=dx*diff;b.y-=dy*diff;return}
+    var h=diff*.5;a.x+=dx*h;a.y+=dy*h;b.x-=dx*h;b.y-=dy*h;
+  }
+
+  /* ---------- drawing ---------- */
+  function draw(t){
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,W,H);
+    /* floor shadow */
+    var fg=ctx.createRadialGradient(W/2,floorY+4,4,W/2,floorY+4,W*.45);
+    fg.addColorStop(0,'rgba(5,14,36,.55)');fg.addColorStop(1,'rgba(5,14,36,0)');
+    ctx.fillStyle=fg;ctx.fillRect(0,floorY-30,W,60);
+    ctx.fillStyle='rgba(159,184,242,.16)';ctx.fillRect(W*.08,floorY+1,W*.84,2);
+    if(pieceShow)drawPiece(PIECES[piece],pieceX,floorY,furnH);
+    if(puff>0)drawPuff(puff);
+    drawCloth();
+    drawStrap();
+  }
+
+  function drawCloth(){
+    var rest=P[0].rest;
+    /* base silhouette so no seams show between quads */
+    ctx.beginPath();outline();ctx.fillStyle='#21499f';ctx.fill();
+    /* light per vertex: folds from horizontal compression, tilt from slope, puff from the quilt diamond */
+    var Lv=light||(light=[]);
+    for(var j=0;j<rows;j++)for(var i=0;i<cols;i++){
+      var p=at(i,j),l=at(Math.max(0,i-1),j),r=at(Math.min(cols-1,i+1),j),u=at(i,Math.max(0,j-1)),d=at(i,Math.min(rows-1,j+1));
+      var span=(Math.min(cols-1,i+1)-Math.max(0,i-1))*rest,vspan=(Math.min(rows-1,j+1)-Math.max(0,j-1))*rest;
+      var hx=(r.x-l.x)/span,slope=(r.y-l.y)/span,vy=(d.y-u.y)/vspan,lean=(d.x-u.x)/vspan;
+      var uu=(i+j)/(2*QUILT),vv=(i-j)/(2*QUILT);
+      var puffy=Math.pow(Math.abs(Math.sin(Math.PI*uu)*Math.sin(Math.PI*vv)),.6);
+      Lv[j*cols+i]=31+puffy*12+(hx-1)*22-slope*26-lean*14+(1-vy)*-8;
+    }
+    for(var j1=0;j1<rows-1;j1++)for(var i1=0;i1<cols-1;i1++){
+      var a=at(i1,j1),b=at(i1+1,j1),c=at(i1+1,j1+1),dd=at(i1,j1+1),k=j1*cols+i1;
+      var L=(Lv[k]+Lv[k+1]+Lv[k+cols]+Lv[k+cols+1])*.25;
+      L=Math.max(13,Math.min(60,L));
+      ctx.fillStyle='hsl(221,64%,'+L.toFixed(1)+'%)';ctx.strokeStyle=ctx.fillStyle;ctx.lineWidth=.6;
+      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.lineTo(c.x,c.y);ctx.lineTo(dd.x,dd.y);ctx.closePath();ctx.fill();ctx.stroke();
+    }
+    /* quilt stitching on the diagonals */
+    ctx.strokeStyle='rgba(176,198,246,.55)';ctx.lineWidth=1.1;ctx.setLineDash([3,3]);
+    ctx.beginPath();
+    for(var s=-rows;s<cols+rows;s+=QUILT*2){
+      var started=false;
+      for(var j2=0;j2<rows;j2++){var i2=s+j2;if(i2<0||i2>=cols){started=false;continue}var p=at(i2,j2);if(!started){ctx.moveTo(p.x,p.y);started=true}else ctx.lineTo(p.x,p.y)}
+      started=false;
+      for(var j3=0;j3<rows;j3++){var i3=s+(rows-1-j3)-rows+QUILT*2;if(i3<0||i3>=cols){started=false;continue}var p3=at(i3,j3);if(!started){ctx.moveTo(p3.x,p3.y);started=true}else ctx.lineTo(p3.x,p3.y)}
+    }
+    ctx.stroke();ctx.setLineDash([]);
+    /* binding all round, with its own stitch line */
+    ctx.beginPath();outline();ctx.lineJoin='round';
+    ctx.strokeStyle='#0b1b40';ctx.lineWidth=7;ctx.stroke();
+    ctx.strokeStyle='rgba(159,184,242,.55)';ctx.lineWidth=1;ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
+  }
+  function outline(){
+    var i,j,p=at(0,0);ctx.moveTo(p.x,p.y);
+    for(i=1;i<cols;i++){p=at(i,0);ctx.lineTo(p.x,p.y)}
+    for(j=1;j<rows;j++){p=at(cols-1,j);ctx.lineTo(p.x,p.y)}
+    for(i=cols-2;i>=0;i--){p=at(i,rows-1);ctx.lineTo(p.x,p.y)}
+    for(j=rows-2;j>0;j--){p=at(0,j);ctx.lineTo(p.x,p.y)}
+    ctx.closePath();
+  }
+
+  function drawStrap(){
+    /* orange ratchet strap pulled across the stage */
+    var y=rodY-3;
+    ctx.fillStyle='rgba(5,14,36,.35)';ctx.fillRect(0,y+5,W,4);
+    ctx.fillStyle='#ff8a1e';ctx.fillRect(0,y-4,W,9);
+    ctx.fillStyle='rgba(255,255,255,.18)';
+    for(var x=0;x<W;x+=6)ctx.fillRect(x,y-4,2,9);
+    ctx.fillStyle='#d96a00';ctx.fillRect(0,y+3,W,2);
+    /* ratchet buckle near the right edge: the handle you pull */
+    var bx=rodX1+Math.min(40,(W-rodX1)*.45);
+    ctx.save();ctx.translate(bx,y);
+    ctx.fillStyle='#5b6478';rr(-14,-11,28,22,4);ctx.fill();
+    ctx.fillStyle='#8d97ad';rr(-11,-8,22,16,3);ctx.fill();
+    ctx.fillStyle='#3a4152';ctx.fillRect(-2,-8,4,16);
+    ctx.restore();
+  }
+  function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+
+  function drawPuff(k){
+    var a=k*.5;ctx.fillStyle='rgba(220,230,255,'+(a*.5).toFixed(3)+')';
+    for(var i=0;i<9;i++){
+      var ang=i/9*Math.PI,rad=(1-k)*furnW*.7+10;
+      ctx.beginPath();ctx.arc(W/2+Math.cos(ang)*rad,floorY-6-Math.sin(ang)*rad*.25,8+(1-k)*14,0,7);ctx.fill();
+    }
+  }
+
+  function drawPiece(kind,cx,fy,h){
+    ctx.save();ctx.translate(cx,fy);
+    var w=h*1.15;
+    /* contact shadow */
+    ctx.fillStyle='rgba(5,14,36,.45)';ctx.beginPath();ctx.ellipse(0,0,w*.55,7,0,0,7);ctx.fill();
+    if(kind==='chair'){
+      var s=h/200;ctx.scale(s,s);
+      var up=ctx.createLinearGradient(0,-200,0,0);up.addColorStop(0,'#e7b54d');up.addColorStop(1,'#b9822a');
+      /* legs */
+      ctx.fillStyle='#6b4122';ctx.fillRect(-92,-24,12,24);ctx.fillRect(80,-24,12,24);
+      /* back */
+      ctx.fillStyle=up;rr(-82,-196,164,130,34);ctx.fill();
+      ctx.fillStyle='rgba(120,70,15,.25)';rr(-60,-180,120,100,26);ctx.fill();
+      /* seat */
+      ctx.fillStyle='#d9a441';rr(-88,-86,176,46,16);ctx.fill();
+      ctx.fillStyle='rgba(255,240,200,.25)';rr(-80,-84,160,10,6);ctx.fill();
+      /* arms */
+      ctx.fillStyle='#c99234';rr(-112,-120,42,98,20);ctx.fill();rr(70,-120,42,98,20);ctx.fill();
+      ctx.fillStyle='rgba(255,236,190,.28)';rr(-108,-118,34,12,6);ctx.fill();rr(74,-118,34,12,6);ctx.fill();
+      ctx.fillStyle='#a8711f';ctx.fillRect(-92,-40,184,16);
+    }else if(kind==='dresser'){
+      var s2=h/200;ctx.scale(s2,s2);
+      var wd=ctx.createLinearGradient(-90,0,90,0);wd.addColorStop(0,'#8a5631');wd.addColorStop(.5,'#a8703f');wd.addColorStop(1,'#7c4b29');
+      ctx.fillStyle='#5a361b';ctx.fillRect(-82,-16,12,16);ctx.fillRect(70,-16,12,16);
+      ctx.fillStyle=wd;rr(-92,-190,184,176,6);ctx.fill();
+      ctx.fillStyle='#6e4224';ctx.fillRect(-98,-196,196,14);
+      for(var d=0;d<3;d++){
+        var y0=-170+d*52;
+        ctx.fillStyle='rgba(60,32,12,.35)';rr(-80,y0,160,44,4);ctx.fill();
+        ctx.fillStyle='#b07a47';rr(-77,y0+2,154,39,3);ctx.fill();
+        ctx.fillStyle='#e6c27a';ctx.beginPath();ctx.arc(-38,y0+22,4.5,0,7);ctx.arc(38,y0+22,4.5,0,7);ctx.fill();
+      }
+    }else{
+      var s3=h/200;ctx.scale(s3,s3);
+      box(-104,-92,116,92,'KITCHEN');box(14,-80,96,80,'');box(-62,-170,112,78,'BOOKS');
+    }
+    ctx.restore();
+  }
+  function box(x,y,w,h,label){
+    var g=ctx.createLinearGradient(x,y,x,y+h);g.addColorStop(0,'#d3a46b');g.addColorStop(1,'#b8874f');
+    ctx.fillStyle=g;ctx.fillRect(x,y,w,h);
+    ctx.fillStyle='rgba(90,55,20,.25)';ctx.fillRect(x,y,w,5);
+    ctx.fillStyle='rgba(235,215,170,.75)';ctx.fillRect(x+w/2-9,y,18,h*.45);
+    if(label){ctx.fillStyle='#2a2a33';ctx.font='900 '+Math.round(h*.17)+'px '+getComputedStyle(document.body).fontFamily;ctx.textAlign='center';ctx.fillText(label,x+w/2,y+h*.78)}
+  }
+
+  /* ---------- input: pointer events cover mouse, pen and touch ---------- */
+  function setPtr(e){ptr.cx=e.clientX;ptr.cy=e.clientY}
+  cv.addEventListener('pointerdown',function(e){
+    setPtr(e);var r=cv.getBoundingClientRect();ptr.x=ptr.px=e.clientX-r.left;ptr.y=ptr.py=e.clientY-r.top;
+    ptr.in=true;ptr.down=true;ptr.moved=0;
+    ptr.strap=Math.abs(ptr.y-rodY)<26;
+    if(ptr.strap&&state!=='idle'&&state!=='lower'){ptr.strap=false}
+    if(ptr.strap)state='manual';
+    if(cv.setPointerCapture)cv.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  });
+  cv.addEventListener('pointermove',function(e){
+    if(ptr.down){ptr.moved+=Math.abs(e.clientX-ptr.cx)+Math.abs(e.clientY-ptr.cy)}
+    setPtr(e);if(e.pointerType==='mouse')ptr.in=true;
+  });
+  function up(){
+    if(ptr.strap){
+      /* pulled most of the way down: the piece vanishes, then the blanket lifts */
+      if(rodY>rodUp+(rodDown-rodUp)*.6&&pieceShow){state='hold';st=HOLD*.4}
+      else{state='raise';st=0;raiseFrom=rodY}
+      ptr.strap=false;
+    }else if(ptr.down&&ptr.moved<8&&state==='idle'){state='lower';st=0;lowerFrom=rodY}
+    ptr.down=false;if(ptr.type!=='mouse')ptr.in=false;
+  }
+  cv.addEventListener('pointerup',function(e){ptr.type=e.pointerType;up()});
+  cv.addEventListener('pointercancel',function(e){ptr.type=e.pointerType;up()});
+  cv.addEventListener('pointerleave',function(e){if(e.pointerType==='mouse'&&!ptr.down)ptr.in=false});
+
+  build();
+  /* settle the cloth before the first paint */
+  for(var k=0;k<90;k++){sim(k*.016,.016);st=0}
+  draw(0);
+  window.addEventListener('resize',function(){if(build()){for(var k=0;k<60;k++){sim(k*.016,.016);st=0}draw(0)}});
+  if(REDUCED)return;
+  var h=Loop.add(function(t,dt){sim(t,dt);draw(t)});
+  watch(stage,h);
+})();
+
+/* ===== blanket-hem dividers: the binding edge sways with the same breeze ===== */
+(function(){
+  var hems=[].slice.call(document.querySelectorAll('[data-hem]'));
+  function shape(t,ph){
+    var top=[],x,y;
+    for(x=0;x<=1200;x+=24){
+      y=20+Math.sin(x*.006+t*1.3+ph)*7+Math.sin(x*.017-t*2.2+ph*1.7)*3.2+Math.sin(x*.0021+t*.5)*4;
+      top.push([x,y]);
+    }
+    var line='M'+top.map(function(p){return p[0]+' '+p[1].toFixed(1)}).join(' L');
+    return{line:line,fill:line+' L1200 46 L0 46 Z',stitch:'M'+top.map(function(p){return p[0]+' '+(p[1]+8).toFixed(1)}).join(' L')};
+  }
+  function paint(t){
+    hems.forEach(function(s){
+      if(s._off)return;
+      var d=shape(t,+(s.dataset.phase||0)),ps=s.querySelectorAll('path');
+      ps[0].setAttribute('d',d.fill);ps[1].setAttribute('d',d.line);ps[2].setAttribute('d',d.stitch);
+    });
+  }
+  /* flipped hems fill the section above, so swap the fill color to match it */
+  hems.forEach(function(s){
+    var prev=s.previousElementSibling,next=s.nextElementSibling;
+    var target=s.classList.contains('flip')?prev:next;
+    var fillEl=s.querySelector('.fill');
+    var bg=target?getComputedStyle(target).backgroundColor:'';
+    if(!bg||bg==='rgba(0, 0, 0, 0)')bg=getComputedStyle(document.body).backgroundColor;
+    fillEl.style.fill=bg;
+    s.style.background=getComputedStyle(s.classList.contains('flip')?next:prev).backgroundColor;
+    if(s.style.background==='rgba(0, 0, 0, 0)')s.style.background=getComputedStyle(document.body).backgroundColor;
+  });
+  paint(0);
+  if(REDUCED)return;
+  var h=Loop.add(function(t){paint(t)});
+  if('IntersectionObserver' in window){
+    var vis=0;
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target._off=!e.isIntersecting});vis=hems.some(function(s){return !s._off});h.on=vis;if(vis)Loop.wake()});
+    hems.forEach(function(s){s._off=true;io.observe(s)});
+  }else{h.on=true;Loop.wake()}
+})();
+
+/* ===== quote form: composes a text message to Rich ===== */
+(function(){
+  var f=document.getElementById('qform');if(!f)return;
+  var NUM='+17326827345';
+  var copy={
+    move:{from:'Moving from',what:"What's going?",ph:'Bed, dresser, couch, about 15 boxes. Second floor, no elevator.',to:true,open:"Hi Rich, I've got a small move coming up."},
+    clean:{from:'Where is the clean out?',what:"What needs to go?",ph:'Basement and garage. I have a 20-yard dumpster coming Friday.',to:false,open:'Hi Rich, I need help with a clean out.'},
+    furniture:{from:'Pickup town',what:'What piece(s)?',ph:'An old recliner and a dresser, both in good shape.',to:false,open:"Hi Rich, I've got furniture I need to disappear."}
+  };
+  var toField=document.getElementById('toField');
+  function kind(){return f.querySelector('input[name=kind]:checked').value}
+  function sync(){
+    var c=copy[kind()];
+    document.getElementById('fromLabel').textContent=c.from;
+    document.getElementById('whatLabel').textContent=c.what;
+    document.getElementById('what').placeholder=c.ph;
+    toField.hidden=!c.to;
+  }
+  [].forEach.call(f.querySelectorAll('input[name=kind]'),function(r){r.addEventListener('change',sync)});
+  [].forEach.call(f.querySelectorAll('[data-req] input,[data-req] textarea'),function(el){
+    el.addEventListener('input',function(){if(el.value.trim())el.closest('.field').classList.remove('bad')});
+  });
+  function val(id){return document.getElementById(id).value.trim()}
+  function compose(){
+    var k=kind(),c=copy[k],lines=[c.open];
+    if(k==='move'){lines.push('From: '+val('from'));if(val('to'))lines.push('To: '+val('to'))}
+    else lines.push('Where: '+val('from'));
+    if(val('when'))lines.push('When: '+val('when'));
+    lines.push((k==='move'?"What's going: ":'What: ')+val('what'));
+    if(val('name'))lines.push('- '+val('name'));
+    return lines.join('\n');
+  }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var first=null;
+    [].forEach.call(f.querySelectorAll('[data-req]'),function(fd){
+      var el=fd.querySelector('input,textarea'),bad=!el.value.trim();
+      fd.classList.toggle('bad',bad);if(bad&&!first)first=el;
+    });
+    if(first){first.focus();return}
+    var body=compose();
+    document.getElementById('msg').textContent=body;
+    document.getElementById('sent').classList.add('on');
+    window.location.href='sms:'+NUM+'?&body='+encodeURIComponent(body);
+  });
+  document.getElementById('copy').addEventListener('click',function(){
+    var b=this,t=document.getElementById('msg').textContent;
+    function done(){b.textContent='Copied'}
+    if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,function(){});
+  });
+  sync();
+})();
+</script>
+</body>
+</html>
