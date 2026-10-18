@@ -29,6 +29,30 @@
         ],
         "createdAt": "2026-10-18T17:49:30.463Z",
         "reason": "model judgment: detector reads only static px sizes; h1/h2 are clamp()-sized at 54-115px over 17px body (ratio >3)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "createdAt": "2026-10-18T17:54:22.581Z",
+        "reason": "model judgment: Facebook-blue button is a house-rule exception (finishing-rules: prominent Facebook link), recorded as an exception in DESIGN.md"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(20, 96, 207)",
+        "createdAt": "2026-10-18T17:54:22.651Z",
+        "reason": "model judgment: Facebook-blue button is a house-rule exception (finishing-rules: prominent Facebook link), recorded as an exception in DESIGN.md"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#0f52b5",
+        "createdAt": "2026-10-18T17:54:22.722Z",
+        "reason": "model judgment: Facebook-blue button is a house-rule exception (finishing-rules: prominent Facebook link), recorded as an exception in DESIGN.md"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#93a6d6",
+        "createdAt": "2026-10-18T17:54:22.793Z",
+        "reason": "model judgment: input placeholder tint derived from the blue ground for contrast; intended"
       }
     ]
   }
