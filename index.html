@@ -55,7 +55,8 @@ p{margin:0}
 /* ---------- buttons ---------- */
 .btn{display:flex;align-items:center;justify-content:center;gap:.6em;min-height:58px;padding:0 26px;border-radius:999px;font:800 1.05rem/1 var(--font);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border:2px solid var(--strap);transition:background .2s,color .2s,border-color .2s,transform .15s;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .btn:active{transform:scale(.98)}
-.btn-primary{background:var(--strap);color:var(--on-strap);box-shadow:var(--lift)}
+.btn-primary{position:relative;background:var(--strap);color:var(--on-strap);box-shadow:var(--lift)}
+.btn-primary::after{content:"";position:absolute;inset:4px;border-radius:inherit;border:1.5px dashed rgba(29,18,4,.32);pointer-events:none}
 .btn-ghost{background:transparent;color:var(--ink);border-color:rgba(243,246,255,.55)}
 @media (hover:hover){
   .btn-primary:hover{background:var(--strap-hi);border-color:var(--strap-hi)}
@@ -81,7 +82,8 @@ p{margin:0}
 .promise{margin-top:14px;font-size:var(--lead);line-height:1.45;color:var(--soft);max-width:30ch}
 .promise strong{color:var(--ink);font-weight:700}
 .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
-.cta .btn{padding:0 12px;letter-spacing:.04em}
+.cta .btn{padding:0 10px;letter-spacing:.04em;white-space:nowrap}
+@media (max-width:389px){.cta .btn{font-size:.98rem;letter-spacing:.02em;gap:.4em}.cta .btn svg{width:18px;height:18px}}
 .stage{position:relative;height:clamp(280px,76vw,380px);margin:0 calc(var(--gutter) * -1)}
 .stage canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none;display:block;cursor:grab}
 .stage canvas:active{cursor:grabbing}
@@ -171,7 +173,7 @@ footer b{color:var(--ink);text-transform:uppercase;letter-spacing:.04em}
 footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:600}
 footer nav{display:flex;flex-wrap:wrap;gap:4px 24px}
 
-@media (max-width:350px){.mark span{display:none}}
+@media (max-width:399px){.mark span{display:none}}
 @media (max-width:389px){
   .mark b{font-size:1.02rem}
   .mark span{font-size:.72rem;letter-spacing:.04em}
@@ -261,12 +263,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="section specialty">
   <div class="wrap">
     <h2>Small moves are my specialty</h2>
-    <p>An apartment, a few rooms, a couch across town. <strong>When you text this number, you get me,</strong> and I look after your things the whole way there.</p>
+    <p>A small move is still your whole life in the back of my van. <strong>I take it piece by piece</strong> and treat every one like it's going into my own house.</p>
     <p>Got one or a few pieces of usable furniture you're done with? I can make it “disappear.”</p>
-    <p>I also do clean outs. You get the dumpster, and I provide the labor to fill it.</p>
+    <p>Clean outs work like this: you get the dumpster, and I provide the labor to fill it.</p>
     <a class="fb" href="https://www.facebook.com/profile.php?id=100077726984175" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg>
-      Find me on Facebook
+      See more on my Facebook
     </a>
   </div>
 </section>
@@ -399,7 +401,7 @@ function watch(el,h){
   var dust=[];
   var FONT=getComputedStyle(document.body).fontFamily;
   var ptr={x:0,y:0,px:0,py:0,in:false,down:false,cx:0,cy:0,strap:false,moved:0};
-  var PIECES=['chair','dresser','boxes'],light=null;
+  var PIECES=['chair','dresser','boxes'],light=null,Ls0=null;
 
   function build(){
     var r=stage.getBoundingClientRect(),w=Math.round(r.width),h=Math.round(r.height);
@@ -494,9 +496,9 @@ function watch(el,h){
   }
   function kickDust(){
     /* floor dust spills out from under both corners of the hem */
-    for(var k=0;k<16;k++){
+    for(var k=0;k<44;k++){
       var side=k%2?1:-1,c=at(side>0?cols-1:0,rows-1);
-      dust.push({x:c.x,y:Math.min(floorY-4,c.y),vx:side*(40+Math.random()*90),vy:-(10+Math.random()*30),r:5+Math.random()*9,t:0,life:.7+Math.random()*.5});
+      dust.push({x:c.x-side*Math.random()*12,y:Math.min(floorY-2,c.y)-Math.random()*6,vx:side*(30+Math.random()*130),vy:-(8+Math.random()*55),r:1+Math.random()*2.4,t:0,life:.6+Math.random()*.7});
     }
   }
   function bend(a,b,rest,aPinned){
@@ -539,8 +541,17 @@ function watch(el,h){
       var hx=(r.x-l.x)/span,slope=(r.y-l.y)/span,vy=(d.y-u.y)/vspan,lean=(d.x-u.x)/vspan;
       var uu=(i+j)/(2*QUILT),vv=(i-j)/(2*QUILT);
       var puffy=Math.pow(Math.abs(Math.sin(Math.PI*uu)*Math.sin(Math.PI*vv)),.6);
-      Lv[j*cols+i]=33+puffy*2+(hx-1)*22-slope*26-lean*14+(1-vy)*-8+(cover>.02?bump(p.x,p.y)*8*cover:0);
+      Lv[j*cols+i]=33+puffy*2+(hx-1)*22-slope*26-lean*14+(1-vy)*-8;
     }
+    /* soften: one box-blur pass so folds read as cloth, not facets; then the piece underneath presses through */
+    var Ls=Ls0||(Ls0=[]);
+    for(var j4=0;j4<rows;j4++)for(var i4=0;i4<cols;i4++){
+      var sum=0,c4=0;
+      for(var oy=-1;oy<=1;oy++)for(var ox=-1;ox<=1;ox++){var y4=j4+oy,x4=i4+ox;if(y4>=0&&y4<rows&&x4>=0&&x4<cols){sum+=Lv[y4*cols+x4];c4++}}
+      var pp4=at(i4,j4);
+      Ls[j4*cols+i4]=sum/c4+(cover>.02?bump(pp4.x,pp4.y)*15*cover:0);
+    }
+    Lv=Ls;
     for(var j1=0;j1<rows-1;j1++)for(var i1=0;i1<cols-1;i1++){
       var a=at(i1,j1),b=at(i1+1,j1),c=at(i1+1,j1+1),dd=at(i1,j1+1),k=j1*cols+i1;
       var L=(Lv[k]+Lv[k+1]+Lv[k+cols]+Lv[k+cols+1])*.25;
@@ -592,10 +603,9 @@ function watch(el,h){
 
   function drawDust(){
     for(var i=0;i<dust.length;i++){
-      var d=dust[i],k=d.t/d.life,r=d.r*(1+k*1.2),a=.32*(1-k);
-      var g=ctx.createRadialGradient(d.x,d.y,0,d.x,d.y,r);
-      g.addColorStop(0,'rgba(214,206,190,'+a.toFixed(3)+')');g.addColorStop(1,'rgba(214,206,190,0)');
-      ctx.fillStyle=g;ctx.fillRect(d.x-r,d.y-r,r*2,r*2);
+      var d=dust[i],k=d.t/d.life;
+      ctx.fillStyle='rgba(206,196,176,'+(.75*(1-k)).toFixed(3)+')';
+      ctx.beginPath();ctx.arc(d.x,d.y,d.r*(1+k*.6),0,7);ctx.fill();
     }
   }
   /* rough outline of each piece, in its 200-unit drawing space, for showing it through the cloth */
@@ -619,19 +629,30 @@ function watch(el,h){
     ctx.fillStyle='rgba(5,14,36,.45)';ctx.beginPath();ctx.ellipse(0,0,w*.55,7,0,0,7);ctx.fill();
     if(kind==='chair'){
       var s=h/200;ctx.scale(s,s);
-      var up=ctx.createLinearGradient(0,-200,0,0);up.addColorStop(0,'#e7b54d');up.addColorStop(1,'#b9822a');
-      /* legs */
-      ctx.fillStyle='#6b4122';ctx.fillRect(-92,-24,12,24);ctx.fillRect(80,-24,12,24);
-      /* back */
-      ctx.fillStyle=up;rr(-82,-196,164,130,34);ctx.fill();
-      ctx.fillStyle='rgba(120,70,15,.25)';rr(-60,-180,120,100,26);ctx.fill();
-      /* seat */
-      ctx.fillStyle='#d9a441';rr(-88,-86,176,46,16);ctx.fill();
-      ctx.fillStyle='rgba(255,240,200,.25)';rr(-80,-84,160,10,6);ctx.fill();
-      /* arms */
-      ctx.fillStyle='#c99234';rr(-112,-120,42,98,20);ctx.fill();rr(70,-120,42,98,20);ctx.fill();
-      ctx.fillStyle='rgba(255,236,190,.28)';rr(-108,-118,34,12,6);ctx.fill();rr(74,-118,34,12,6);ctx.fill();
-      ctx.fillStyle='#a8711f';ctx.fillRect(-92,-40,184,16);
+      function grad(y0,y1,c0,c1){var g=ctx.createLinearGradient(0,y0,0,y1);g.addColorStop(0,c0);g.addColorStop(1,c1);return g}
+      /* tapered walnut legs with their own shadow */
+      ctx.fillStyle='rgba(5,14,36,.5)';ctx.beginPath();ctx.ellipse(-86,0,12,3,0,0,7);ctx.ellipse(86,0,12,3,0,0,7);ctx.fill();
+      ctx.fillStyle='#6b4122';
+      ctx.beginPath();ctx.moveTo(-94,-26);ctx.lineTo(-80,-26);ctx.lineTo(-84,0);ctx.lineTo(-90,0);ctx.fill();
+      ctx.beginPath();ctx.moveTo(80,-26);ctx.lineTo(94,-26);ctx.lineTo(90,0);ctx.lineTo(84,0);ctx.fill();
+      /* back: rounded, shaded from the top light, inner tuft panel */
+      ctx.fillStyle=grad(-198,-70,'#ecbd58','#b98228');rr(-84,-198,168,134,36);ctx.fill();
+      ctx.fillStyle=grad(-182,-84,'rgba(150,95,20,.28)','rgba(150,95,20,.05)');rr(-62,-182,124,104,28);ctx.fill();
+      ctx.strokeStyle='rgba(120,72,14,.45)';ctx.lineWidth=2;ctx.setLineDash([]);rr(-62,-182,124,104,28);ctx.stroke();
+      /* base rail */
+      ctx.fillStyle=grad(-48,-24,'#b07a26','#8f5f1a');rr(-96,-48,192,24,8);ctx.fill();
+      /* seat cushion with piping and a front seam */
+      ctx.fillStyle=grad(-92,-46,'#f0c565','#c99234');rr(-90,-92,180,48,18);ctx.fill();
+      ctx.strokeStyle='rgba(255,236,190,.55)';ctx.lineWidth=2.5;rr(-90,-92,180,48,18);ctx.stroke();
+      ctx.strokeStyle='rgba(120,72,14,.4)';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(-80,-60);ctx.quadraticCurveTo(0,-54,80,-60);ctx.stroke();
+      /* arms: rolled tops, shaded sides, piping */
+      [-1,1].forEach(function(d){
+        var x=d<0?-116:72;
+        ctx.fillStyle=grad(-126,-24,'#e3ad48','#a8711f');rr(x,-126,44,102,20);ctx.fill();
+        ctx.fillStyle=grad(-128,-104,'#f6d07a','#d49d3a');rr(x-2,-130,48,26,13);ctx.fill();
+        ctx.strokeStyle='rgba(255,236,190,.5)';ctx.lineWidth=2;rr(x-2,-130,48,26,13);ctx.stroke();
+        ctx.fillStyle='rgba(90,50,8,.22)';ctx.fillRect(d<0?x+34:x,-104,10,78);
+      });
     }else if(kind==='dresser'){
       var s2=h/200;ctx.scale(s2,s2);
       var wd=ctx.createLinearGradient(-90,0,90,0);wd.addColorStop(0,'#8a5631');wd.addColorStop(.5,'#a8703f');wd.addColorStop(1,'#7c4b29');
