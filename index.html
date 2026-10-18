@@ -395,7 +395,7 @@ function watch(el,h){
     QUILT=Math.max(2,Math.round(QUILT_PX/rest));
     rodUp=26;
     var pieceTop=floorY-furnH;
-    rows=Math.max(8,Math.round((pieceTop-rodUp-14)/rest))+1;  /* raised, the hem clears the piece */
+    rows=Math.max(8,Math.round((pieceTop-rodUp-24)*.9/rest))+1;  /* raised, the hem clears the piece */
     var len=(rows-1)*rest;
     rodDown=Math.min(pieceTop-6,floorY-len+30);               /* lowered, it swallows the piece and pools on the floor */
     rodY=rodUp;
@@ -499,7 +499,7 @@ function watch(el,h){
       var hx=(r.x-l.x)/span,slope=(r.y-l.y)/span,vy=(d.y-u.y)/vspan,lean=(d.x-u.x)/vspan;
       var uu=(i+j)/(2*QUILT),vv=(i-j)/(2*QUILT);
       var puffy=Math.pow(Math.abs(Math.sin(Math.PI*uu)*Math.sin(Math.PI*vv)),.6);
-      Lv[j*cols+i]=31+puffy*12+(hx-1)*22-slope*26-lean*14+(1-vy)*-8;
+      Lv[j*cols+i]=33+puffy*6+(hx-1)*22-slope*26-lean*14+(1-vy)*-8;
     }
     for(var j1=0;j1<rows-1;j1++)for(var i1=0;i1<cols-1;i1++){
       var a=at(i1,j1),b=at(i1+1,j1),c=at(i1+1,j1+1),dd=at(i1,j1+1),k=j1*cols+i1;
