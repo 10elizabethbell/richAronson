@@ -49,7 +49,7 @@
           "index.html"
         ],
         "createdAt": "2026-10-19T23:32:55.883Z",
-        "reason": "model judgment: only two hits, both verified false positives: section.deep is a full-bleed band whose inner .wrap carries a 20-36px gutter, and ul.rows is a hairline-ruled list. Value ignores can't match this rule (no extractable value), so it is scoped to the file"
+        "reason": "model judgment: both hits are verified false positives (section.deep is a full-bleed band whose .wrap has a 20-36px gutter; ul.rows is a hairline-ruled list). This rule has no extractable value, so only a file-scoped * can suppress it"
       }
     ]
   }
