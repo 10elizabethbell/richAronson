@@ -10,18 +10,6 @@
         "reason": "Ellie's pitch-site house style (ellie-taste.md section 2) mandates the system font stack; Roboto is only the Android fallback in that stack"
       },
       {
-        "rule": "cramped-padding",
-        "value": "rows",
-        "createdAt": "2026-10-18T17:39:40.190Z",
-        "reason": "model judgment: .rows is a ruled list (hairline top border) whose 78px-tall rows carry their own 10px vertical padding; flush-left text against a divider rule is intended"
-      },
-      {
-        "rule": "cramped-padding",
-        "value": "deep",
-        "createdAt": "2026-10-18T17:49:30.399Z",
-        "reason": "model judgment: section.deep is a full-bleed band; its inner .wrap carries a 20-36px gutter (verified in 360/390 screenshots)"
-      },
-      {
         "rule": "flat-type-hierarchy",
         "value": "*",
         "files": [
@@ -53,6 +41,15 @@
         "value": "#93a6d6",
         "createdAt": "2026-10-18T17:54:22.793Z",
         "reason": "model judgment: input placeholder tint derived from the blue ground for contrast; intended"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T23:32:55.883Z",
+        "reason": "model judgment: only two hits, both verified false positives: section.deep is a full-bleed band whose inner .wrap carries a 20-36px gutter, and ul.rows is a hairline-ruled list. Value ignores can't match this rule (no extractable value), so it is scoped to the file"
       }
     ]
   }
